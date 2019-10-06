@@ -60,6 +60,8 @@ int main()
 
 void initJeu(int nbl, int nbc) {
     int i=0,j=0;
+    time_t t;
+    
     srand((unsigned) time(&t));
     
     repeat(nbl) { 
