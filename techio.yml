@@ -3,7 +3,7 @@ title : Exercices Papers animés - Le jeu de la vie - Solutions
 # Table of contents
 plan:
   - title: Paper animé avec step_display() - Exemple # Set the page title
-    statement: markdowns/welcome.md # Set the file path to the page content
+    statement: markdowns/welcome.md # Set the file path to the page content.
   - title: Exercice 1 - Le jeu de la vie - un clignotant
     statement: markdowns/vie.md
   - title: Exercice 2 - Le jeu de la vie - un canon à planeurs
