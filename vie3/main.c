@@ -15,7 +15,7 @@ int main()
     
     initJeu(nbl,nbc);
 
-    repeat(0) {
+    repeat(400) {
         
         // 1ere passe : calcul des nombres de voisines :
         repeat(nbl) { 
@@ -67,7 +67,7 @@ void initJeu(int nbl, int nbc) {
     repeat(nbl) { 
         repeat(nbc) { 
             move_to(i,j);
-            if (rand()%2==0) {
+            if (rand()%5==0) {
                 colorize();
             }
             j++;
