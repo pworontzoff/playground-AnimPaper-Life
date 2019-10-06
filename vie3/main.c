@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "paper.h"
 
-void initJeu();
+void initJeu(int,int);
 int getNbVoisines(int,int,int,int);
 
 int main()
@@ -12,10 +12,9 @@ int main()
     int i=0,j=0;
     init_paper(nbl,nbc,10,0.05,1);
     
-    initJeu();
-    
+    initJeu(nbl,nbc);
 
-    repeat(400) {
+    repeat(0) {
         
         // 1ere passe : calcul des nombres de voisines :
         repeat(nbl) { 
@@ -58,110 +57,22 @@ int main()
     return 0;
 }
 
-void initJeu() {
-    move_to(30,5);
-    colorize();
-    move_right();
-    colorize();
-    move_down();
-    colorize();
-    move_left();
-    colorize();
-    repeat(10) {
-        move_right();
-    }
-    colorize();
-    move_up();
-    colorize();
-    move_up();
-    colorize();    
-    move_up();
-    move_right();
-    colorize();
-    move_up();
-    move_right();
-    colorize();
-    move_right();
-    colorize();
-    move_right();
-    move_right();
-    move_down();
-    colorize();
-    move_right();
-    move_down();
-    colorize();
-    move_down();
-    colorize();
-    move_right();
-    colorize();
-    move_left();
-    move_down();
-    colorize();
-    move_down();
-    move_left();
-    colorize();
-    move_up();
-    move_up();
-    move_left();
-    colorize();
-    move_down();
-    move_down();
-    move_down();
-    move_left();
-    colorize();
-    move_left();
-    colorize();
-    move_left();
-    move_up();
-    colorize();
-    move_left();
-    move_up();
-    colorize();
-    repeat(10) {
-        move_right();
-    }
-    colorize();
-    move_down();
-    colorize();
-    move_down();
-    colorize();
-    move_right();
-    colorize();
-    move_up();
-    colorize();
-    move_up();
-    colorize();
-    move_up();
-    move_right();
-    colorize();
-    repeat(4) {
-        move_down();
-    }
-    colorize();
-    move_right();
-    move_right();
-    colorize();
-    move_down();
-    colorize();
-    repeat(5) {
-        move_up();
-    }
-    colorize();
-    move_up();
-    colorize();
-    repeat(10) {
-        move_right();
-    }
-    repeat(3) {
-        move_down();
-    }
-    colorize();
-    move_right();
-    colorize();
-    move_down();
-    colorize();
-    move_left();
-    colorize();
+void initJeu(int nbl, int nbc) {
+    int i=0,j=0;
+    srand((unsigned) time(&t));
+    
+    repeat(nbl) { 
+        repeat(nbc) { 
+            move_to(i,j);
+            if (rand()%2==0) {
+                colorize();
+            }
+            j++;
+        } loop;
+        j = 0;
+        i++;
+    } loop;
+    i = 0;
     
     move_to(0,0);
     step_display();
