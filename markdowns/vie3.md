@@ -10,6 +10,8 @@ Ensuite, bien entendu, nous ne priverons pas de lancer la simulation ;-)
 
 ## Remarques
 
+Dans l'exemple aléatoire donné plus haut, on a environ une cellule sur 5 (1 carré noir pour 4 blancs), c'est programmé... Vous devrez donc pouvoir contrôler la proportion de cellules dans votre solution !
+
 Bon travail !
 
 @[Exercice 3]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "vie3"})
