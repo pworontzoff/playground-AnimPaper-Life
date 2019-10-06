@@ -1,4 +1,4 @@
-# Exercice 7 - Le jeu de la vie, v2 : un canon à planeurs
+# Exercice 2 - Le jeu de la vie, v2 : un canon à planeurs
 
 Le challenge consiste à créer et faire évoluer un "canon à planeurs", comme montré à cet endroit de la vidéo : https://youtu.be/S-W0NX97DB0?t=484
 
