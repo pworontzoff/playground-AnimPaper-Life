@@ -1,4 +1,4 @@
-# Exercice 6 - Le jeu de la vie, v1 : un clignotant
+# Exercice 1 - Le jeu de la vie, v1 : un clignotant
 
 Commençons par une petite "séance cinoche" :
 
