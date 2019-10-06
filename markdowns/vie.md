@@ -16,7 +16,7 @@ Le jeu de la vie consiste à enchaîner les générations.
 
 Le configuration (ou génération) initiale étant celle du clignotant :
 
-![vie1](img/ex6.png)
+![vie1](img/ex2.png)
 
 Pour cet exercice, on peut se limiter à 10 étapes (10 générations), afin d'obsever le clignotant en action. On pourra également travailler avec une grille de 9x16 cases de 25 pixels, avec un délai d'animation de 0,5s.
 
@@ -42,4 +42,4 @@ les nombres de voisines sur base desquels on prend les décisions :
 
 Bon travail !
 
-@[Exercice 6]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "vie"})
+@[Exercice 2]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "vie"})
