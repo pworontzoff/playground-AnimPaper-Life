@@ -13,6 +13,6 @@ Un `paper animé` en mode "useStepping" est donc un quadrillage dans lequel on v
 
 Voici un exemple qui re-colorie (9 fois) les cases noires en blanc et inversement. Ceci en dessinant des petits carrés (de côtés 2) tout en haut à gauche du paper animé :
 
-@[Sample step_display()]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "AnimPaper_step_display_sample"})
+@[Sample step_display()]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "animPaperWithStepDisplay"})
 
 On voit que chaque `colorize()` n'est pas immédiatement affiché, c'est seulement lors des `step_display()` que les affichages (des 4 cases noires ou blanches, d'un coup) se font. Notons également que la dernière valeur de paramètre de `init_paper()` est bien *1* !
