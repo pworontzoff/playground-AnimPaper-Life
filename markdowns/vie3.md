@@ -4,7 +4,7 @@ Le challenge consiste à créer et créer une configuration initiale aléatoire 
 
 Pour cela, nous allons programmer (sur une grille de 40x60 cases de 10 pixels, avec un délai d'animation de 0,05s) une configuration initiale aléatoire, par exemple :
 
-![vie3](img/ex3.png)
+![vie3](img/ex2.png)
 
 ## Remarques
 
