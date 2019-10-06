@@ -1,60 +1,18 @@
-title : Exercices Papers animés - Solutions
+title : Exercices Papers animés - Le jeu de la vie - Solutions
 
 # Table of contents
 plan:
-  - title: Paper animé - Exemple # Set the page title
+  - title: Paper animé avec step_display() - Exemple # Set the page title
     statement: markdowns/welcome.md # Set the file path to the page content
-  - title: Exercice 1 - La fourmi de Langton # Another Page
-    statement: markdowns/fourmi.md
-  - title: Exercice 2 - La fourmi de Langton v2 
-    statement: markdowns/fourmi2.md
-  - title: Exercice 3 - La fourmi de Langton v3 
-    statement: markdowns/fourmi3.md
-  - title: Exercice 4 - La fourmi de Langton v4
-    statement: markdowns/fourmi4.md
-  - title: Exercice 5 - La fourmi de Langton v5
-    statement: markdowns/fourmi5.md
-  - title: Exemple Paper animé avec step_display
-    statement: markdowns/sample_stepping.md
-  - title: Exercice 6 - Le jeu de la vie - un clignotant
+  - title: Exercice 1 - Le jeu de la vie - un clignotant
     statement: markdowns/vie.md
-  - title: Exercice 7 - Le jeu de la vie - un canon à planeurs
+  - title: Exercice 2 - Le jeu de la vie - un canon à planeurs
     statement: markdowns/vie2.md
 
 # Settings for your programming projects and the associated Docker images
 projects:
-  paper:
-    root: "/animPapers"
-    runner:
-      name: techio/cmake-gcc-runner
-      version: latest
-  fourmi1:
-    root: "/Fourmi"
-    runner:
-      name: techio/cmake-gcc-runner
-      version: latest
-  fourmi2:
-    root: "/Fourmi2"
-    runner:
-      name: techio/cmake-gcc-runner
-      version: latest
-  fourmi3:
-    root: "/Fourmi3"
-    runner:
-      name: techio/cmake-gcc-runner
-      version: latest
-  fourmi4:
-    root: "/Fourmi4"
-    runner:
-      name: techio/cmake-gcc-runner
-      version: latest
-  fourmi5:
-    root: "/Fourmi5"
-    runner:
-      name: techio/cmake-gcc-runner
-      version: latest
-  sample_step_display:
-    root: "/sample_step_display"
+  animPaperWithStepDisplay:
+    root: "/AnimPaper_step_display_sample"
     runner:
       name: techio/cmake-gcc-runner
       version: latest
