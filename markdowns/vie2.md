@@ -4,7 +4,7 @@ Le challenge consiste à créer et faire évoluer un "canon à planeurs", comme 
 
 Pour cela, nous allons programmer (sur une grille de 40x60 cases de 10 pixels, avec un délai d'animation de 0,05s) la configuration initiale suivante :
 
-![vie2](img/ex7.png)
+![vie2](img/ex2.png)
 
 ## Remarques
 
