@@ -33,14 +33,12 @@ int main()
         repeat(nbl) { 
             repeat(nbc) { 
                 move_to(i,j); //pour chaque case en ligne i, colonne j, sans examiner les bords :
-                if (get_color() == black) { // mort probable (isolement ou surpopulation)
+                if (is_colored()) { // mort probable (isolement ou surpopulation)
                     if (tab_nb_voisines[i][j] != 2 && tab_nb_voisines[i][j] != 3) { // mort !
-                        change_color(white);
-                        colorize();
+                        erase();
                     }
                 } else { // naissance probable (si 3 voisines)
                     if (tab_nb_voisines[i][j] == 3) { // naissance !
-                        change_color(black);
                         colorize();
                     }
                 }
@@ -171,35 +169,35 @@ int getNbVoisines(int i, int j, int nbl, int nbc) {
     int cpt = 0;
     if (j>0) {
         move_to(i,j-1);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     if (j>0 && i>0) {
         move_to(i-1,j-1);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     if (i>0) {
         move_to(i-1,j);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     if (i>0 && j<nbc-1) {
         move_to(i-1,j+1);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     if (j<nbc-1) {
         move_to(i,j+1);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     if (j<nbc-1 && i<nbl-1) {
         move_to(i+1,j+1);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     if (i<nbl-1) {
         move_to(i+1,j);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     if (i<nbl-1 && j>0) {
         move_left(i+1,j-1);
-        if (get_color() == black) cpt++;
+        if (is_colored()) cpt++;
     }
     move_to(i,j);
     return cpt;
