@@ -32,4 +32,4 @@ Voici un exemple qui colorie un petit carré de 4 cases en en haut à gauche du 
 
 @[Sample step_display()]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "animPaperWithStepDisplay"})
 
-On voit que chaque `colorize()` n'est pas immédiatement affiché, c'est seulement lors des `step_display()` que les affichages (des 4 cases dessinées ou effacées, d'un coup) se font. Notons également que la dernière valeur de paramètre de `init_paper()` est bien *1* !
+On voit que chaque `colorize()` n'est pas immédiatement affiché, c'est seulement lors des `step_display()` que les affichages (des 4 cases dessinées ou effacées, d'un coup) se font. Notons également que la dernière valeur de paramètre de `init_paper()` est bien *1*.
