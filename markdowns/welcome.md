@@ -20,6 +20,7 @@ Les fonctions permettant de manipuler un `paper animé` :
 - `move_right()` : déplace le "curseur" de coloriage d'une case à droite ;
 - `move_down()` : déplace le "curseur" de coloriage d'une case vers le bas ;
 - `move_up()`  : déplace le "curseur" de coloriage d'une case vers le haut ;
+- `move_to(i,j)` : déplace le "curseur" de coloriage en ligne `i`, colonne `j`. NB : la première ligne est la ligne numéro 0 et la première colonne est la colonne numéro 0 ;
 - `colorize()` : colorie la case où se trouve le "curseur" de coloriage. **Attention : on ne peut jamais colorier hors du `paper animé`**. NB : en mode `useStepping` (dernier paramètre à 1), ce coloriage sera différé jusqu'au prochain appel à `step_display()` ;
 - `erase()` : efface la couleur de la case où se trouve le "curseur" de coloriage. **Attention : on ne peut jamais effacer hors du `paper animé `**. NB : en mode `useStepping` (dernier paramètre à 1), cet effacement sera différé jusqu'au prochain appel à `step_display()` ;
 - `step_display()` : en mode `useStepping` (dernier paramètre à 1), affiche d'un seul coup et dans l'ordre tous les `colorize()` et `erase()` effectués depuis le `step_display()` précédent (ou à défaut, depuis le début du programme). NB : en mode normal (dernier paramètre `useStepping` à 0), cette fonction n'a aucun effet.
