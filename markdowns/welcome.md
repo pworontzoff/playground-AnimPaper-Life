@@ -7,7 +7,7 @@ Il y a juste une petite subtilité supplémentaire pour pouvoir utiliser des `co
 
 ## Manipuler les papers animés (avec "step_display()")
 
-Un `paper animé` en mode "useStepping" est donc un quadrillage dans lequel on va pouvoir se déplacer, colorier et effacer des cases. Le "curseur" de coloriage se trouve initialement toujours dans le coin supérieur gauche et chaque appel à `step_display()` est une étape de l'animation (qui affiche d'un seul coup tous les `colorize()` faits jusque-là).
+Un `paper animé` en mode "useStepping" est donc un quadrillage dans lequel on va pouvoir se déplacer, colorier et effacer des cases. Le "curseur" de coloriage se trouve initialement toujours dans le coin supérieur gauche et chaque appel à `step_display()` est une étape de l'animation (qui affiche d'un seul coup et dans l'ordre, tous les `colorize()` et `erase()` faits jusque-là).
 
 Les fonctions permettant de manipuler un `paper animé` :
 - `init_paper(nb_lignes,nb_colonnes,taille,delai_anim,useStepping)` : 
