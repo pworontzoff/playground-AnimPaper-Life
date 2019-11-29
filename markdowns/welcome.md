@@ -11,7 +11,7 @@ Un `paper animé` en mode "useStepping" est donc un quadrillage dans lequel on v
 
 Les fonctions permettant de manipuler un `paper animé` :
 - `init_paper(nb_lignes,nb_colonnes,taille,delai_anim,useStepping)` : 
-    * Permet de créer un `paper` contenant `nb_lignes` lignes ;
+    * Permet de créer un `paper animé` contenant `nb_lignes` lignes ;
     * et `nb_colonnes` colonnes ;
     * `taille` est la dimension en pixel d'une case et ;
     * `delai_anim` est le temps de pause (en seconde) entre chaque coloriages ou effacements de cases. Ce délai peut-être décimal, par exemple 0.05 pour 5 centièmes de seconde ;
