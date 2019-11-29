@@ -9,6 +9,22 @@ Il y a juste une petite subtilité supplémentaire pour pouvoir utiliser des `co
 
 Un `paper animé` en mode "useStepping" est donc un quadrillage dans lequel on va pouvoir se déplacer, colorier et effacer des cases. Le "curseur" de coloriage se trouve initialement toujours dans le coin supérieur gauche et chaque appel à `step_display()` est une étape de l'animation (qui affiche d'un seul coup tous les `colorize()` faits jusque-là).
 
+Les fonctions permettant de manipuler un `paper animé` :
+- `init_paper(nb_lignes,nb_colonnes,taille,delai_anim,useStepping)` : 
+    * Permet de créer un `paper` contenant `nb_lignes` lignes ;
+    * et `nb_colonnes` colonnes ;
+    * `taille` est la dimension en pixel d'une case et ;
+    * `delai_anim` est le temps de pause (en seconde) entre chaque coloriages ou effacements de cases. Ce délai peut-être décimal, par exemple 0.05 pour 5 centièmes de seconde ;
+    * Le paramètre `useStepping` permet de différer les coloriages et effacement de cases (via `colorize()` et `erase()`) qui n'auront lieu (d'un seul coup) qu'une fois appelée la fonction `step_display()`. Pour ce faire, ce paramètre `useStepping` devra valoir 1. (S'il vaut 0, `step_display()` n'a aucun effet et chaque `colorize()` et `erase()` sont effectifs immédiatement.). En mode `useStepping` (dernier paramètre à 1), chaque étape montrée par `step_display()` s'affiche pendant `delai_anim` secondes. En mode normal (dernier paramètre `useStepping` à 0), chaque `colorize()` et chaque `erase()` s'affichent pendant `delai_anim` secondes.
+- `move_left()` : déplace le "curseur" de coloriage d'une case à gauche ;
+- `move_right()` : déplace le "curseur" de coloriage d'une case à droite ;
+- `move_down()` : déplace le "curseur" de coloriage d'une case vers le bas ;
+- `move_up()`  : déplace le "curseur" de coloriage d'une case vers le haut ;
+- `colorize()` : colorie la case où se trouve le "curseur" de coloriage. **Attention : on ne peut jamais colorier hors du `paper`** ;
+- `erase()` : efface la couleur de la case où se trouve le "curseur" de coloriage. **Attention : on ne peut jamais effacer hors du `paper`** ;
+- `change_color(rouge,vert,bleu)` : permet de définir la couleur de coloriage en fixant l'intensité des composantes rouge, verte et bleu. **Attention : chaque composante de couleur ne peut qu'être un nombre entier entre 0 inclus et 255 inclus** ;
+- `display_paper()` : affiche le `paper animé`.
+
 ### Exemple
 
 Voici un exemple qui colorie un petit carré de 4 cases en en haut à gauche du paper, puis les efface, et recommence 9 fois :
