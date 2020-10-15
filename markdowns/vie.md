@@ -6,4 +6,4 @@ https://tech.io/playgrounds/51350/exercices-papers-animes---le-jeu-de-la-vie---e
 
 ## Une solution type
 
-@[Exercice 2]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "vie"})
+@[Exercice 1]({"stubs": ["main.c"],"command": "sh /project/target/run.sh", "project" : "vie"})
