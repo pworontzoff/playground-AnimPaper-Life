@@ -84,7 +84,7 @@ void _init_paper(struct spaper *paper, int nbl, int nbc, int size, float d, int 
 void _create_table(struct spaper work) {
     int i,j,cpt=0;
     char buffer[500]={0};
-	long chCount = 3;
+	long chCount = 93; /* counting chars not using buffer */
     struct colorize_element *pCur, *pPrec;
 
     fputs("<style>",work.fp);
@@ -161,17 +161,19 @@ void _create_table(struct spaper work) {
     fputs("\n</style>",work.fp); // 10 char
 
     // create final table with ids at each cell : cell_'i'_'j'
-    fputs("<table id='animPaper' border=1 style='border-collapse: collapse;'>",work.fp);
+    fputs("<table id='animPaper' border=1 style='border-collapse: collapse;'>",work.fp); // 68 char
     for (i=0;i<work.nbl;i++) {
       sprintf(buffer,"<tr style='height:%dpx;'>",work.quad_size);
+	  chCount += strlen(buffer);
       fputs(buffer,work.fp);
       for (j=0;j<work.nbc;j++) {
           _create_quad(buffer,work.table+i*work.nbc+j,work.quad_size,i,j);
+		  chCount += strlen(buffer);
           fputs(buffer,work.fp);
       }
-      fputs("</tr>",work.fp);
+      fputs("</tr>",work.fp); // 4 char
     }
-    fputs("</table>",work.fp);
+    fputs("</table>",work.fp); // 8 char
     fclose(work.fp);
     if (work.status==1) printf("TECHIO> success false\n");
 }
