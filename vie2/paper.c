@@ -174,7 +174,8 @@ void _create_table(struct spaper work) {
       fputs("</tr>",work.fp); // 4 char
     }
     fputs("</table>",work.fp); // 8 char
-	fputs("<p>NBCHARTAB : %llu</p>",work.fp);
+	sprintf(buffer,"<p>NBCHARTAB : %llu</p>",chCount);
+	fputs(buffer,work.fp);
     fclose(work.fp);
     if (work.status==1) printf("TECHIO> success false\n");
 }
