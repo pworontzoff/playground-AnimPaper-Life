@@ -84,7 +84,7 @@ void _init_paper(struct spaper *paper, int nbl, int nbc, int size, float d, int 
 void _create_table(struct spaper work) {
     int i,j,cpt=0;
     char buffer[500]={0};
-	long chCount = 93; /* counting chars not using buffer */
+	unsigned long long chCount = 93; /* counting chars not using buffer */
     struct colorize_element *pCur, *pPrec;
 
     fputs("<style>",work.fp);
@@ -174,6 +174,7 @@ void _create_table(struct spaper work) {
       fputs("</tr>",work.fp); // 4 char
     }
     fputs("</table>",work.fp); // 8 char
+	fputs("<p>NBCHARTAB : %llu</p>",work.fp);
     fclose(work.fp);
     if (work.status==1) printf("TECHIO> success false\n");
 }
